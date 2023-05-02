@@ -1,0 +1,28 @@
+@import './styles/variables';
+
+.app{
+  overflow: hidden;
+  height: max-content;
+
+  &__header-wrapper{
+    height: max-content;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+  }
+
+  &__toggler{
+    cursor: pointer;
+
+    & i{
+      font-size: 20px;
+    }
+  }
+
+  &__home{
+    padding-top: 63px;
+  }
+
+}
+

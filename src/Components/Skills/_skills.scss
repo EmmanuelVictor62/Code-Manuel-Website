@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.skills{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3em 0em 5em 0em;
+    text-align: center;
+
+    &[data-toggle='true']{
+        background-color: $col-dark-global;
+        color: $col-white;
+    }
+
+    &__heading{
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+
+    &__icon{
+        font-size: 45px;
+
+        &-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 80px;
+
+            @include respond(mobile-screen){
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            @include respond(tablet-screen){
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        
+        &-name{
+            @include font(20px,600);
+            margin: 10px 0px;
+        }
+
+    }
+}
