@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+
+.icon {
+  &__name {
+    @include font(19px, 500);
+    margin: 10px 0px;
+  }
+}
