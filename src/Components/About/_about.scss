@@ -1,126 +1,124 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.about{
-    height:fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 4em 0em 7em 0em;
+.about {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4em 0em 7em 0em;
 
-    &[data-toggle='true']{
-        background: $col-dark-global;
-        color: $col-white;
-    }
+  &[data-toggle="true"] {
+    background: $col-dark-global;
+    color: $col-white;
+  }
 
-    @include respond(mobile-screen){
-        flex-direction: column;
-        height: fit-content;
-        justify-content: center;
-        padding: 30px 0px;
-    }
+  @include respond(mobile-screen) {
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    padding: 30px 0px;
+  }
 
-   &__image{
-    &-container{
-        @include slideInLeftAnimation;
-        animation: slideInLeft 1.5s ease 0s 1 normal forwards;
-        background-color: lightgray;
-        width: fit-content;
-        border-radius: 50px;
-        cursor: pointer;
-        margin: 0px 30px;
+  &__image {
+    &-container {
+      @include slideInLeftAnimation;
+      animation: slideInLeft 5s ease 0s 1 normal forwards;
+      background-color: lightgray;
+      width: fit-content;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 0px 30px;
 
-        @include respond(mobile-screen){
-            margin: 0;
-            width: 90%;
-            display: flex;
-            justify-content: center;
-        }
-    }
-   }
-
-   &__description{
-
-    &-container{
-        font-family: 'Times New Roman', Times, serif;
-        max-width: 750px;
-        @include font(19px,400);
-        @include slideInRightAnimation;
-        animation: slideInRight 2s ease 0s 1 normal forwards;
-
-        @include respond(mobile-screen){
-            padding: 0px 15px;
-        }
-    }
-
-    &-heading{
-        @include font(32px, 600);
-
-        @include respond(mobile-screen){
-            text-align: center;
-            font-size: 29px;
-        }
-    }
-
-    &-content{
-        @include respond(mobile-screen){
-            font-size: 18px;
-            line-height: 28px;
-        }
-    }
-   }
-
-   &__button{
-    &-container{
+      @include respond(mobile-screen) {
+        margin: 0;
+        width: 90%;
         display: flex;
-        gap: 15px;
-        margin-top: 30px;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__description {
+    &-container {
+      font-family: "Times New Roman", Times, serif;
+      max-width: 750px;
+      @include font(19px, 400);
+      @include slideInRightAnimation;
+      animation: slideInRight 4s ease 0s 1 normal forwards;
+
+      @include respond(mobile-screen) {
+        padding: 0px 15px;
+      }
     }
 
-    &--hire{
-        @include button;
+    &-heading {
+      @include font(32px, 600);
 
-        &:hover{
-            background-color: $col-accent-2;
-            a{
-                color: $col-white;
-            }
-        }
-
-        &[data-toggle='true']{
-            a{
-                color:$col-white;
-            }
-        }
-
-        a{
-            color:$col-dark;
-        }
-
-        @include respond(mobile-screen){
-            width:120px;
-        }
-        
+      @include respond(mobile-screen) {
+        text-align: center;
+        font-size: 29px;
+      }
     }
 
-    &--download{
-        @include button;
-        background-color: $col-red-2;
-        border-color: $col-red-2;
-
-        &:hover{
-            background-color: $col-red;
-            a{
-                color: $col-white;
-            }
-        }
-
-        a{
-            color:$col-white;
-        }
-
-        @include respond(mobile-screen){
-            width:150px;
-        }
+    &-content {
+      @include respond(mobile-screen) {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
-   }
+  }
+
+  &__button {
+    &-container {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    &--hire {
+      @include button;
+
+      &:hover {
+        background-color: $col-accent-2;
+        a {
+          color: $col-white;
+        }
+      }
+
+      &[data-toggle="true"] {
+        a {
+          color: $col-white;
+        }
+      }
+
+      a {
+        color: $col-dark;
+      }
+
+      @include respond(mobile-screen) {
+        width: 120px;
+      }
+    }
+
+    &--download {
+      @include button;
+      background-color: $col-red-2;
+      border-color: $col-red-2;
+
+      &:hover {
+        background-color: $col-red;
+        a {
+          color: $col-white;
+        }
+      }
+
+      a {
+        color: $col-white;
+      }
+
+      @include respond(mobile-screen) {
+        width: 150px;
+      }
+    }
+  }
 }

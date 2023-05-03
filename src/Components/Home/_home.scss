@@ -1,110 +1,110 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.home-page{
+.home-page {
+  &__container {
+    @include flex-column;
+    @include font-size(18px);
+    height: 92vh;
+    width: 100%;
+    justify-content: center;
+    background: URL("../../Images/laptopanddesktop.webp") no-repeat center
+      center fixed;
+    @include background-cover;
+    background-color: $col-dark-2;
+    text-align: center;
+    // @include kenBurnsEffect;
+    // animation: ken-burns 20s ease-in-out infinite;
 
-    &__container{
-        @include flex-column;
-        @include font-size(18px);
-        height: 92vh;
-        width: 100%;
-        justify-content: center;
-        background: URL('../../Images/laptopanddesktop.webp');
-        @include background-cover;
-        background-color: $col-dark-2;
-        text-align: center;
+    @include respond(mobile-screen) {
+      background-position: center;
+    }
+  }
 
-        @include respond(mobile-screen){
-            background-position: center
-        }
+  &__heading {
+    @include font(60px, 300);
+    @include bounceDownAnimation;
+    color: $col-white;
+    opacity: 0.9;
+    font-family: "Times New Roman", Times, serif;
+    animation: bounceDown 2s ease 0s 1 normal forwards;
+    margin-bottom: 30px;
+
+    @include respond(mobile-screen) {
+      @include font-size(42px);
+      @include flex;
+      max-width: 80%;
+      height: 105px;
+      margin-bottom: 20px;
+      margin-top: 0px;
     }
 
-    &__heading{
-        @include font(60px,300);
-        @include bounceDownAnimation;
-        color: $col-white;
-        opacity: 0.9;
-        font-family: 'Times New Roman', Times, serif;
-        animation: bounceDown 2s ease 0s 1 normal forwards;
-        margin-bottom: 30px;
-
-        @include respond(mobile-screen){
-            @include font-size(42px);
-            @include flex;
-            max-width: 80%;
-            height: 105px;
-            margin-bottom: 20px;
-            margin-top: 0px;
-        }
-
-        @include respond(tablet-screen){
-            @include font-size(53px);
-        }
-
-        & span{
-            @include font(65px,800);
-
-            &[data-toggle='true']{
-                background: linear-gradient(to right, #FFA673 11%, #FFD596 96%);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            @include respond(mobile-screen){
-                @include font-size(45px);
-            }
-
-            @include respond(tablet-screen){
-                @include font-size(52px);
-            }
-            
-        }
+    @include respond(tablet-screen) {
+      @include font-size(53px);
     }
 
-    &__description{
-        @include fadeInAnimation;
-        @include font-size(22px);
-        max-width: 640px;
-        color: $col-white;
-        opacity: 0.7;
-        margin-top: 0px;
-        line-height: 30px;
-        animation: fadeIn 2s ease 0s 1 normal forwards;
+    & span {
+      @include font(65px, 800);
 
-        @include respond(mobile-screen){
-            @include font-size(18px);
-            line-height: 40px;
-            width: 89%;
-        }
+      &[data-toggle="true"] {
+        background: linear-gradient(to right, #ffa673 11%, #ffd596 96%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-        @include respond(tablet-screen){
-            @include font-size(20px);
-        }
+      @include respond(mobile-screen) {
+        @include font-size(45px);
+      }
+
+      @include respond(tablet-screen) {
+        @include font-size(52px);
+      }
+    }
+  }
+
+  &__description {
+    @include fadeInAnimation;
+    @include font-size(22px);
+    max-width: 640px;
+    color: $col-white;
+    opacity: 0.7;
+    margin-top: 0px;
+    line-height: 30px;
+    animation: fadeIn 2s ease 0s 1 normal forwards;
+
+    @include respond(mobile-screen) {
+      @include font-size(18px);
+      line-height: 40px;
+      width: 89%;
     }
 
-    &__button{
-        @include button;
+    @include respond(tablet-screen) {
+      @include font-size(20px);
+    }
+  }
 
-        &:hover{
-            background-color: $col-accent-2;
-        }
+  &__button {
+    @include button;
+
+    &:hover {
+      background-color: $col-accent-2;
+    }
+  }
+
+  &__link {
+    @include transition;
+    @include font-size(20px);
+    color: $col-white;
+    opacity: 0.9;
+    margin-left: 25px;
+
+    &:hover {
+      color: $col-white;
+      text-decoration: underline;
     }
 
-    &__link{
-        @include transition;
-        @include font-size(20px);
-        color:$col-white;
-        opacity: 0.9;
-        margin-left: 25px;
-
-        &:hover{
-            color: $col-white;
-            text-decoration: underline;
-        }
-
-        @include respond(mobile-screen){
-            @include font-size(16px);
-        }
+    @include respond(mobile-screen) {
+      @include font-size(16px);
     }
-    
+  }
 }
