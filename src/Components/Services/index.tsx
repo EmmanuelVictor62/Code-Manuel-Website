@@ -23,7 +23,11 @@ const Services: React.FC<ServicesProps> = ({ toggle }) => {
                 </div>
               </div>
               <div className="services-container__description">
-                {service.description}
+                <ul>
+                  {service.description.map((element, index) => {
+                    return <li key={index + 1}>{element}</li>;
+                  })}
+                </ul>
                 <i className="fa-solid fa-quote-right"></i>
               </div>
             </div>
