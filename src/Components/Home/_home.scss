@@ -114,7 +114,7 @@
 
   &__link {
     @include transition;
-    @include font-size(12px);
+    @include font-size(22px);
     color: $col-white;
     opacity: 0.9;
     margin-left: 18px;
@@ -125,7 +125,7 @@
     }
 
     @include respond(mobile-screen) {
-      @include font-size(16px);
+      @include font-size(12px);
     }
   }
 }
