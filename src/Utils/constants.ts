@@ -158,61 +158,64 @@ export const skillsIcon = [
 export const flipBoxContent = [
   {
     img: GodsWillImg,
-    heading: "Fully Responsive Church Website",
-    description: `Lorem ipsum dolor sit amet consectetur 
-        elit. Ipsa voluptatum ipsum, laudantium minima aliquam
-        porro? Iste, Et, esta ah`,
+    heading: "Responsive Church Website",
+    description: `Experience a modern and interactive church website built on 
+    WordPress, with a responsive design and easy-to-use interface.`,
     githubLink: "",
     link: "https://dev-gods-will-pentecostal.pantheonsite.io/",
+    skills: ["HTML", "CSS", "Next.js", "Wordpress"],
   },
   {
     img: CuratorVideo,
-    heading: "Curator Video Migration",
-    description: `Worked together with a team to migrate an 
-        angular based project to React using React + 
-        TypeScript + Scss + NextJS + StorybookJS`,
+    heading: "Curator Video",
+    description: `Collaborated on video livestreaming software using React 
+    TypeScript. Features responsive design, live chat, high-quality streaming,
+     and custom graphics. Efficient implementation for reliable, user-friendly solution.`,
     githubLink: "https://github.com/curatorvideo/curator-react-frontend",
-    link: "https://jetbrain-clone-project.vercel.app/",
+    link: "https://curatorvideo.com/",
     height: "250%",
-    // width: "150%",
+    skills: ["React", "Typescript", "StorybookJs", "Next.js"],
   },
   {
     img: Avocado,
-    heading: "Responsive Jetbrain Clone Website",
-    description: `Lorem ipsum dolor sit amet consectetur 
-        elit. Ipsa voluptatum ipsum, laudantium minima aliquam
-        porro? Iste, Et, esta ah`,
-    githubLink: "https://github.com/EmmanuelVictor62/Jetbrain-clone-project",
-    link: "https://jetbrain-clone-project.vercel.app/",
+    heading: "Avocado Grocery",
+    description: `"Managed admin frontend for grocery app development with efficient API request consumption.
+     User-friendly interface and seamless data retrieval for optimal functionality.`,
+    githubLink: "https://github.com/creativemindsdev/avocado-web",
+    link: "https://avocadoapp.ng/",
     height: "150%",
+    skills: ["React", "Redux", "Typescript", "Next.js", "GraphQl"],
   },
   {
     img: Homedotly,
-    heading: "Responsive Airbnb Clone Website",
-    description: `Lorem ipsum dolor sit amet consectetur 
-        elit. Ipsa voluptatum ipsum, laudantium minima aliquam
-        porro? Iste, Et, esta ah`,
-    githubLink:
-      "https://github.com/EmmanuelVictor62/Airbnb-Clone/tree/main/airbnb",
-    link: "https://airbnb-clone-ashen-two.vercel.app/",
+    heading: "Homedotly",
+    description: `Contributed to receipt and asset management app with 
+    efficient web page integration for streamlined admin functionality. 
+    Custom design elements and optimal user experience for improved 
+    productivity.`,
+    githubLink: "https://github.com/creativemindsdev/homedotly-frontend",
+    link: "https://homedotly.co.uk/",
+    skills: ["React", "Typescript", "StorybookJs", "Next.js"],
   },
   {
     img: airbnbImg,
-    heading: "Fully Responsive Apple Clone Website",
-    description: `Lorem ipsum dolor sit amet consectetur 
-        elit. Ipsa voluptatum ipsum, laudantium minima aliquam
-        porro? Iste, Et, esta ah`,
-    githubLink: "https://github.com/EmmanuelVictor62/Apple.com",
-    link: "https://royalmanuelapple.netlify.app/",
+    heading: "Airbnb Clone Website",
+    description: `Developed a responsive Airbnb clone with React and CSS, 
+    featuring custom design elements and user-friendly functionality. 
+    Optimized interface for seamless user experience.`,
+    githubLink: "https://github.com/EmmanuelVictor62/Airbnb-Clone",
+    link: "https://airbnb-clone-ashen-two.vercel.app/",
+    skills: ["React", "CSS"],
   },
   {
     img: portfolioImg,
-    heading: "My Portfolio Website",
-    description: `Lorem ipsum dolor sit amet consectetur 
-        elit. Ipsa voluptatum ipsum, laudantium minima aliquam
-        porro? Iste, Et, esta ah`,
-    githubLink: "",
+    heading: "CodeManuel Website",
+    description: ` Responsive portfolio website with React, TypeScript, and 
+    SCSS, highlighting skills and expertise. Custom design elements and 
+    streamlined functionality for an engaging, professional experience.`,
+    githubLink: "https://github.com/EmmanuelVictor62/Code-Manuel-Website",
     link: "",
+    skills: ["React", "Typescript", "Scss"],
   },
 ];
 
