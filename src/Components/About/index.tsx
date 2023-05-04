@@ -10,7 +10,7 @@ const About: React.FC<AboutMeProps> = ({ toggle }) => {
   return (
     <div className="about" id="about" data-toggle={toggle}>
       <div className="about__image-container">
-        <img src={myImg} className="about__image" />
+        <img src={myImg} className="about__image" alt="" />
       </div>
       <div className="about__description-container">
         <p className="about__description-heading">A Bit About Me</p>
@@ -48,6 +48,7 @@ const About: React.FC<AboutMeProps> = ({ toggle }) => {
             <a
               href="https://drive.google.com/file/d/1RJ1T8p6ag-Hz-YvroDTMPev_xESuNDK5/view?usp=sharing"
               target={"_blank"}
+              rel="noreferrer"
             >
               Download Resume
             </a>

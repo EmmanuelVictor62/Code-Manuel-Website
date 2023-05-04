@@ -28,7 +28,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ toggle }) => {
 
               <div className="testimonial-card-footer">
                 <button className="testimonial-card-footer-button">
-                  <a href={card.githubLink} target="_blank">
+                  <a href={card.githubLink} target="_blank" rel="noreferrer">
                     {card.image ? (
                       <img src={`${card.image}`} alt={card.image} />
                     ) : (
@@ -41,6 +41,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ toggle }) => {
                   <a
                     href={card.githubLink}
                     target="_blank"
+                    rel="noreferrer"
                     className="testimonial-card-footer-name"
                   >
                     {card.name}

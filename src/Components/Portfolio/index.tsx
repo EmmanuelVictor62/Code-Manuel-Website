@@ -32,19 +32,23 @@ const Portfolio: React.FC = () => {
                 <div className="portfolio__flip-box--back">
                   <div className="portfolio__flip-box--header">
                     <button>
-                      <a href={flipBox.link} target="_blank">
+                      <a href={flipBox.link} target="_blank" rel="noreferrer">
                         <i className="fa-regular fa-folder fa-1x"></i>
                       </a>
                     </button>
 
                     <div className="portfolio__flip-box--header-row">
                       <button>
-                        <a href={flipBox.githubLink} target="_blank">
+                        <a
+                          href={flipBox.githubLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fa brands fa-github"></i>
                         </a>
                       </button>
                       <button>
-                        <a href={flipBox.link} target="_blank">
+                        <a href={flipBox.link} target="_blank" rel="noreferrer">
                           <i className="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                       </button>
