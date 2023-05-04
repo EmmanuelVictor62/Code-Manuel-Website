@@ -2,7 +2,7 @@ import React from "react";
 import { flipBoxContent } from "../../Utils/constants";
 import "./_portfolio.scss";
 
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   return (
     <div className="portfolio" id="portfolio">
       <h1 className="portfolio__heading">
@@ -21,10 +21,11 @@ const Portfolio = () => {
                   <img
                     src={`${flipBox.img}`}
                     loading="lazy"
+                    alt={`${flipBox.img}`}
                     className="portfolio__flip-box--front-image"
                     style={{
                       height: flipBox.height,
-                      width: flipBox.width,
+                      // width: flipBox.width,
                     }}
                   />
                 </div>

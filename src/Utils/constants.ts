@@ -1,10 +1,10 @@
 import GodsWillImg from "../Images/GodsWill.jpg";
-import jetBrainsImg from "../Images/Jetbrain.jpg";
+import Avocado from "../Images/Avocado.png";
+import Homedotly from "../Images/Homedotly.jpg";
+import CuratorVideo from "../Images/curator.jpg";
 import airbnbImg from "../Images/Airbnb.jpg";
-import appleImg from "../Images/Apple.jpg";
 import portfolioImg from "../Images/portfolio.jpg";
 import JaneImg from "../Images/Jane.webp";
-import Curator from "../Images/curator.png";
 
 export const Link = [
   {
@@ -166,28 +166,28 @@ export const flipBoxContent = [
     link: "https://dev-gods-will-pentecostal.pantheonsite.io/",
   },
   {
-    img: Curator,
+    img: CuratorVideo,
     heading: "Curator Video Migration",
     description: `Worked together with a team to migrate an 
         angular based project to React using React + 
         TypeScript + Scss + NextJS + StorybookJS`,
     githubLink: "https://github.com/curatorvideo/curator-react-frontend",
     link: "https://jetbrain-clone-project.vercel.app/",
-    height: "100%",
-    width: "150%",
+    height: "250%",
+    // width: "150%",
   },
   {
-    img: jetBrainsImg,
+    img: Avocado,
     heading: "Responsive Jetbrain Clone Website",
     description: `Lorem ipsum dolor sit amet consectetur 
         elit. Ipsa voluptatum ipsum, laudantium minima aliquam
         porro? Iste, Et, esta ah`,
     githubLink: "https://github.com/EmmanuelVictor62/Jetbrain-clone-project",
     link: "https://jetbrain-clone-project.vercel.app/",
-    height: "250%",
+    height: "150%",
   },
   {
-    img: airbnbImg,
+    img: Homedotly,
     heading: "Responsive Airbnb Clone Website",
     description: `Lorem ipsum dolor sit amet consectetur 
         elit. Ipsa voluptatum ipsum, laudantium minima aliquam
@@ -197,7 +197,7 @@ export const flipBoxContent = [
     link: "https://airbnb-clone-ashen-two.vercel.app/",
   },
   {
-    img: appleImg,
+    img: airbnbImg,
     heading: "Fully Responsive Apple Clone Website",
     description: `Lorem ipsum dolor sit amet consectetur 
         elit. Ipsa voluptatum ipsum, laudantium minima aliquam
