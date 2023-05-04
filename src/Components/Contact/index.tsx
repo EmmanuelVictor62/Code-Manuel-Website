@@ -4,16 +4,17 @@ import "./_contact.scss";
 import emailjs from "emailjs-com";
 
 export interface ContactProps {
-  name?: string;
   toggle?: boolean;
 }
 
-const Contact = (props: ContactProps) => {
+const Contact: React.FC<ContactProps> = ({ toggle }) => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Subject, setSubject] = useState("");
   const [Message, setMessage] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const [toggleAlert, setToggleAlert] = useState(false);
+  const [type, setType] = useState<string>("");
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -33,23 +34,31 @@ const Contact = (props: ContactProps) => {
       .then((res) => {
         console.log(res);
         setStatusMessage(
-          "Thank you for contacting me, I would reply in no time"
+          "Your message has been received, thank you for reaching out."
         );
+        setToggleAlert(true);
+        setType("delivered");
       })
+
       .catch((err) => {
         console.log(err);
-        setStatusMessage(`${err.text} happened`);
+        setStatusMessage(`Oops, something went wrong. Please try again later.`);
+        setToggleAlert(true);
+        setType("error");
       });
   };
 
-  // const emailMessage =
+  const handleAlertToggle = () => {
+    setToggleAlert(!toggleAlert);
+  };
 
   return (
-    <div className="contact" id="contact" data-toggle={props.toggle}>
+    <div className="contact" id="contact" data-toggle={toggle}>
       <div className="contact-sidebar">
         <h3 className="contact-sidebar__heading">Let's get in touch</h3>
         <p className="contact-sidebar__subheading">
-          We're open for any suggestion or just to have a chat
+          Have a project in mind? Let's talk about how I can help. Send me a
+          message today.
         </p>
         {contactField.map((element, index) => {
           return (
@@ -113,7 +122,17 @@ const Contact = (props: ContactProps) => {
             value={Message}
             required
           />
-          <p className={statusMessage}>{statusMessage}</p>
+          {toggleAlert ? (
+            <div className="contact__form-alert">
+              <button onClick={handleAlertToggle}>
+                <i className=" fa-solid fa-xmark"></i>
+              </button>
+              <p className="contact__form-alert-message" data-type={type}>
+                {statusMessage}
+              </p>
+            </div>
+          ) : null}
+
           <button type="submit" value="send" className="contact__form-button">
             Send Message
           </button>

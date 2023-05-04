@@ -14,10 +14,9 @@ const Skills: React.FC<SkillsProps> = ({ toggle }) => {
       <div className="skills__icon-container">
         {skillsIcon.map((icon, index) => {
           return (
-            <div>
+            <div key={index + 1}>
               {icon.iconPath ? (
                 <Icons
-                  key={index + 1}
                   width={icon.width}
                   height={icon.height}
                   viewBox={icon.viewBox}
@@ -25,7 +24,7 @@ const Skills: React.FC<SkillsProps> = ({ toggle }) => {
                   iconPath={icon.iconPath}
                 />
               ) : (
-                <div className="skills__icon-wrapper" key={index + 1}>
+                <div className="skills__icon-wrapper">
                   <i
                     style={{ color: icon.iconColor }}
                     className={`skills__icon ${icon.className}`}
@@ -82,8 +81,8 @@ const Skills: React.FC<SkillsProps> = ({ toggle }) => {
               y2="24"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stop-color="#0d61a9"></stop>
-              <stop offset="1" stop-color="#16528c"></stop>
+              <stop offset="0" stopColor="#0d61a9"></stop>
+              <stop offset="1" stopColor="#16528c"></stop>
             </linearGradient>
             <path
               fill="url(#atmafua87GAY-Q3DVUuwga_nCj4PvnCO0tZ_gr1)"

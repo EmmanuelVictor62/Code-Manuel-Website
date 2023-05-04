@@ -258,9 +258,4 @@ export const contactField = [
     className: "fa-brands fa-linkedin",
     content: "in/emmanuel-victor-0a7700240",
   },
-  {
-    name: "Whatsapp",
-    className: "fa-brands fa-whatsapp",
-    content: "in/emmanuel-victor-0a7700240",
-  },
 ];
