@@ -11,6 +11,15 @@
   &[data-toggle="true"] {
     background-color: $col-dark-global;
     color: $col-white;
+
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.8);
+
+      &-footer-name-description,
+      &-content {
+        color: $col-dark;
+      }
+    }
   }
 
   &__heading {
@@ -18,19 +27,24 @@
     margin-top: 0;
 
     @include respond(mobile-screen) {
-      font-size: 29px;
+      @include font-size(25px);
     }
   }
 
   &__subheading {
     @include font-size(20px);
-    max-width: 80%;
+    max-width: 90%;
     margin: 0;
     line-height: 1.8em;
     text-align: start;
 
     &--container {
       @include flex-justify;
+    }
+
+    @include respond(mobile-screen) {
+      @include font-size(16px);
+      line-height: 32px;
     }
   }
 
@@ -45,8 +59,10 @@
     box-shadow: 8px 12px 25px 0 rgba(0, 0, 0, 0.16);
 
     @include respond(mobile-screen) {
+      height: 420px;
       width: 85%;
       justify-self: center;
+      padding: 20px 15px 30px 20px;
     }
 
     &:hover {
@@ -66,6 +82,7 @@
         grid-template-columns: repeat(1, 1fr);
         row-gap: 2em;
         height: fit-content;
+        margin-top: 3em;
       }
 
       @include respond(tablet-screen) {
@@ -85,6 +102,10 @@
         font-size: 55px;
         transform: rotate(10deg);
         color: #ad2b96;
+
+        @include respond(mobile-screen) {
+          font-size: 30px;
+        }
       }
     }
 
@@ -93,6 +114,10 @@
       text-align: left;
       line-height: 27px;
       color: #4e4e4e;
+
+      @include respond(mobile-screen) {
+        @include font-size(15px);
+      }
     }
 
     &-footer {
@@ -132,6 +157,10 @@
         @include font(22px, 400);
         color: $col-dark;
 
+        @include respond(mobile-screen) {
+          @include font-size(16px);
+        }
+
         &-box {
           border-left: 1px solid #797979;
           margin-left: 10px;
@@ -143,6 +172,11 @@
           margin: 0;
           @include font(15px, 300);
           color: #4e4e4e;
+
+          @include respond(mobile-screen) {
+            @include font-size(14px);
+            margin-top: 2px;
+          }
         }
       }
     }

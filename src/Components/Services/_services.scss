@@ -39,6 +39,9 @@
 
     @include respond(mobile-screen) {
       width: 85%;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
 
     &--wrapper {
@@ -48,7 +51,6 @@
 
       @include respond(mobile-screen) {
         flex-direction: column;
-        gap: 30px;
       }
 
       @include respond(tablet-screen) {
@@ -64,8 +66,7 @@
       position: relative;
 
       p {
-        font-size: 25px;
-        font-weight: 600;
+        @include font(23px, 600);
         margin-top: 30px;
         color: $col-white;
       }
@@ -92,7 +93,7 @@
     }
 
     &__description {
-      @include font(18px, 400);
+      @include font(15px, 400);
       line-height: 1.7rem;
       height: 260px;
       position: relative;
@@ -117,7 +118,7 @@
           list-style-type: disc;
           text-align: start;
           margin-bottom: 10px;
-          @include font(19px, 400);
+          @include font(16px, 400);
         }
       }
     }

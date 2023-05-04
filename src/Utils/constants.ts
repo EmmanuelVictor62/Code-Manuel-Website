@@ -64,7 +64,7 @@ export const ServiceContent = [
     icon: "fa-solid fa-mobile-screen",
   },
   {
-    title: "Performance Optimization",
+    title: "Code Optimization",
     description: [
       "Minification",
       "Code splitting",

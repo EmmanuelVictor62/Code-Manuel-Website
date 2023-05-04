@@ -42,7 +42,7 @@ const Skills: React.FC<SkillsProps> = ({ toggle }) => {
             x="0px"
             y="0px"
             width="80"
-            height="80"
+            height="70"
             viewBox="0 0 48 48"
           >
             <path

@@ -56,13 +56,15 @@
 
       @include respond(mobile-screen) {
         text-align: center;
-        font-size: 29px;
+        @include font-size(27px);
+        margin-bottom: 0px;
       }
     }
 
     &-content {
       @include respond(mobile-screen) {
-        font-size: 18px;
+        @include font-size(15px);
+        // font-size: 16px;
         line-height: 28px;
       }
     }
@@ -73,6 +75,12 @@
       display: flex;
       gap: 15px;
       margin-top: 30px;
+
+      @include respond(mobile-screen) {
+        & button {
+          margin-right: 20px;
+        }
+      }
     }
 
     &--hire {

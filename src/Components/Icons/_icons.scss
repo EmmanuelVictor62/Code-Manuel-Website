@@ -4,5 +4,9 @@
   &__name {
     @include font(19px, 500);
     margin: 10px 0px;
+
+    @include respond(mobile-screen) {
+      @include font(16px, 500);
+    }
   }
 }
