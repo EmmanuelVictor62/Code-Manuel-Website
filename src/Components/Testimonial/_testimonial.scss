@@ -6,6 +6,7 @@
   padding: 4em 0em 6em 0em;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &[data-toggle="true"] {
     background-color: $col-dark-global;
@@ -26,7 +27,7 @@
     max-width: 80%;
     margin: 0;
     line-height: 1.8em;
-    text-align: justify;
+    text-align: start;
 
     &--container {
       @include flex-justify;
@@ -42,6 +43,11 @@
     display: flex;
     flex-direction: column;
     box-shadow: 8px 12px 25px 0 rgba(0, 0, 0, 0.16);
+
+    @include respond(mobile-screen) {
+      width: 85%;
+      justify-self: center;
+    }
 
     &:hover {
       box-shadow: 8px 12px 25px 0 rgba(0, 0, 0, 0.23);
