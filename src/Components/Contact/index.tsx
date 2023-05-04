@@ -33,18 +33,18 @@ const Contact: React.FC<ContactProps> = ({ toggle }) => {
       )
       .then((res) => {
         console.log(res);
+        setType("delivered");
         setStatusMessage(
           "Your message has been received, thank you for reaching out."
         );
         setToggleAlert(true);
-        setType("delivered");
       })
 
       .catch((err) => {
         console.log(err);
+        setType("error");
         setStatusMessage(`Oops, something went wrong. Please try again later.`);
         setToggleAlert(true);
-        setType("error");
       });
   };
 
