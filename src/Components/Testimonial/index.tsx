@@ -2,36 +2,53 @@ import { testimonialCardContent } from "../../Utils/constants";
 import "./_testimonial.scss";
 
 export interface TestimonialProps {
-  name?: string;
   toggle?: boolean;
 }
 
-const Testimonial = (props: TestimonialProps) => {
+const Testimonial: React.FC<TestimonialProps> = ({ toggle }) => {
   return (
-    <div className="testimonial" data-toggle={props.toggle}>
+    <div className="testimonial" data-toggle={toggle}>
       <h1 className="testimonial__heading">Bringing a personal touch</h1>
       <div className="testimonial__subheading--container">
         <p className="testimonial__subheading">
-          Building a great website is more than just knowing how to make things
-          look pretty or writing clever codes. I listen to your needs, ensuring
-          you get a product you are happy with, with codes that both Human and
-          Computer can understand. Listen to the great things others have said.
+          With a passion for frontend development, I continuously improve my
+          skills to take on new challenges. My dedication to open communication
+          and collaboration ensures client satisfaction, delivering projects
+          that exceed expectations. Hear what others have said.
         </p>
       </div>
-      <div className="testimonial-card__wrapper">
+      <div className="testimonial-card-wrapper">
         {testimonialCardContent.map((card, index) => {
           return (
             <div className="testimonial-card" key={index + 1}>
-              <div className="testimonial-card__description">
+              <div className="testimonial-card-header">
                 <i className="fas fa-quote-left quote"></i>
-                <p>{card.content}</p>
               </div>
-              <div className="testimonial-card__subheading">
-                <p>{card.name}</p>
-                <div
-                  className="testimonial-card__image"
-                  style={{ backgroundImage: `url(${card.image})` }}
-                ></div>
+              <p className="testimonial-card-content">{`"${card.content}"`}</p>
+
+              <div className="testimonial-card-footer">
+                <button className="testimonial-card-footer-button">
+                  <a href={card.githubLink} target="_blank">
+                    {card.image ? (
+                      <img src={`${card.image}`} alt={card.image} />
+                    ) : (
+                      <i className="fa-solid fa-user-tie"></i>
+                    )}
+                  </a>
+                </button>
+
+                <div className="testimonial-card-footer-name-box">
+                  <a
+                    href={card.githubLink}
+                    target="_blank"
+                    className="testimonial-card-footer-name"
+                  >
+                    {card.name}
+                  </a>
+                  <p className="testimonial-card-footer-name-description">
+                    {card.description}
+                  </p>
+                </div>
               </div>
             </div>
           );

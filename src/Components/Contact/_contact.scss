@@ -1,183 +1,179 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.contact{
-    @include flex-justify;
-    background-color: $col-grey-3;
-    padding: 3em 0em 5em 0em;
-    font-family: 'Times New Roman', Times, serif;
-    color: $col-white;
+.contact {
+  @include flex-justify;
+  background-color: $col-grey-3;
+  padding: 3em 0em 5em 0em;
+  font-family: "Times New Roman", Times, serif;
+  color: $col-white;
 
-    &[data-toggle='true']{
-        background-color: $col-dark-global;
+  &[data-toggle="true"] {
+    background-color: $col-dark-global;
+  }
+
+  @include respond(mobile-screen) {
+    flex-direction: column-reverse;
+  }
+
+  @include respond(tablet-screen) {
+    flex-direction: row;
+    padding: 3em 1em 5em 1em;
+  }
+
+  &-sidebar {
+    width: 390px;
+    height: 590px;
+    background-color: $col-accent-3;
+    border-radius: 10px;
+    padding: 40px 20px 48px 48px;
+    box-sizing: border-box;
+    box-shadow: -8px 10px 42px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    @include respond(mobile-screen) {
+      border-radius: 0px 0px 10px 10px;
+      height: fit-content;
+      padding-left: 30px;
+      width: 95%;
     }
 
-    @include respond(mobile-screen){
-        flex-direction: column-reverse;
+    @include respond(tablet-screen) {
+      height: 590px;
+      border-radius: 10px 0px 0px 10px;
+      padding-left: 20px;
     }
 
-
-    @include respond(tablet-screen){
-       flex-direction: row; 
-       padding: 3em 1em 5em 1em;        
+    &__heading {
+      @include font(25px, 600);
+      margin-bottom: 20px;
     }
 
-    &-sidebar{
-        width: 390px;
-        height: 590px;
-        background-color: $col-accent-3;
-        border-radius: 10px;
-        padding: 40px 20px 48px 48px;
-        box-sizing: border-box;
-        box-shadow: -8px 10px 42px 0px rgba(0,0,0,0.4);
-        z-index: 1;
-
-        @include respond(mobile-screen){
-            border-radius: 0px 0px 10px 10px;
-            height: fit-content;
-            padding-left: 30px;
-            width: 95%;
-        }
-
-        @include respond(tablet-screen){
-            height:590px;
-            border-radius: 10px 0px 0px 10px;
-            padding-left: 20px
-        }
-
-        &__heading{
-            @include font(25px,600);
-            margin-bottom: 20px;
-        }
-
-        &__subheading{
-            @include font(18px,400);
-            line-height: 1.7rem;
-            margin-top: 0;
-        }
-
-        &__info-container{
-            @include flex;
-            gap: 17px;
-            margin-bottom: 2em;
-        }
-
-        &__icon-wrapper{
-            @include flex-justify;
-            background-color: rgba(255,255,255,0.15);
-            border-radius: 50%;
-            width:50px;
-            height: 50px;
-        }
-
-        &__info{
-            @include font(18px,600);
-
-            & span{
-                @include font(16px,400);
-            }
-        }
+    &__subheading {
+      @include font(18px, 400);
+      line-height: 1.7rem;
+      margin-top: 0;
     }
 
-
-    &__form{
-
-        &-container{
-            @include slideInRightBasic;
-            box-shadow: 0px 21px 41px -13px rgb(0 0 0 / 18%);
-            // height: 560px;
-            width: 560px;
-            background-color: $col-white;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            padding: 3rem;
-            padding-bottom: 1.5rem;
-            box-sizing: border-box;
-            color: $col-dark;
-            animation: slideRight 3.5s ease 0s 1 normal forwards;
-
-            @include respond(mobile-screen){
-                @include slideInUpBasic;
-                width: 90%;
-                height: 580px;
-                border-radius: 10px 10px 0px 0px;
-                padding: 1.5rem;
-                box-sizing: border-box !important;
-                animation: slideUp 3s ease 0s 1 normal forwards;
-            }
-
-            @include respond(tablet-screen){
-                @include slideInRightBasic; 
-                animation: slideRight 3.5s ease 0s 1 normal forwards;
-            }
-
-            & h2{
-                @include font(26px,600);
-                color: $col-dark;
-                margin-top: 0;
-                margin-bottom: 35px;
-
-                @include respond(mobile-screen){
-                    margin-top: 23px;
-                }
-            }
-        }
-
-        &-name-container{
-            @include flex-row;
-            width: 93%;
-            gap: 20px;
-
-
-            @include respond(mobile-screen){
-                width: 100%;
-            }
-        }
-
-        &-input{
-            padding: 7px;
-            height: 40px;
-            margin-bottom: 2rem;
-            display: block;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 3px;
-            width: inherit;
-
-
-            &--subject{
-                width: 90%;
-
-                @include respond(mobile-screen){
-                    width: 95%;
-                }
-            }
-
-            &--textarea{
-                @include font-size(16px);
-               width: 90%; 
-               height: 150px;
-               font-family: 'Times New Roman', Times, serif;
-
-               @include respond(mobile-screen){
-                    width: 95%;
-                }
-            }
-        }
-
-        &-status-message{
-            margin: 0;
-        }
-
-        &-button{
-            @include button;
-            background-color: $col-accent-4;
-            border: 0;
-            border-radius: 5px;
-            padding: 0px 20px;
-            box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
-
-            &:hover{
-                background-color: $col-accent-2;
-            }
-        }
+    &__info-container {
+      @include flex;
+      gap: 17px;
+      margin-bottom: 2em;
     }
+
+    &__icon-wrapper {
+      @include flex-justify;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    &__info {
+      @include font(18px, 600);
+
+      & a {
+        @include font(16px, 400);
+        color: white;
+      }
+    }
+  }
+
+  &__form {
+    &-container {
+      @include slideInRightBasic;
+      box-shadow: 0px 21px 41px -13px rgb(0 0 0 / 18%);
+      // height: 560px;
+      width: 560px;
+      background-color: $col-white;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 3rem;
+      padding-bottom: 1.5rem;
+      box-sizing: border-box;
+      color: $col-dark;
+      animation: slideRight 3.5s ease 0s 1 normal forwards;
+
+      @include respond(mobile-screen) {
+        @include slideInUpBasic;
+        width: 90%;
+        height: 580px;
+        border-radius: 10px 10px 0px 0px;
+        padding: 1.5rem;
+        box-sizing: border-box !important;
+        animation: slideUp 3s ease 0s 1 normal forwards;
+      }
+
+      @include respond(tablet-screen) {
+        @include slideInRightBasic;
+        animation: slideRight 3.5s ease 0s 1 normal forwards;
+      }
+
+      & h2 {
+        @include font(26px, 600);
+        color: $col-dark;
+        margin-top: 0;
+        margin-bottom: 35px;
+
+        @include respond(mobile-screen) {
+          margin-top: 23px;
+        }
+      }
+    }
+
+    &-name-container {
+      @include flex-row;
+      width: 93%;
+      gap: 20px;
+
+      @include respond(mobile-screen) {
+        width: 100%;
+      }
+    }
+
+    &-input {
+      padding: 7px;
+      height: 40px;
+      margin-bottom: 2rem;
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      width: inherit;
+
+      &--subject {
+        width: 90%;
+
+        @include respond(mobile-screen) {
+          width: 95%;
+        }
+      }
+
+      &--textarea {
+        @include font-size(16px);
+        width: 90%;
+        height: 150px;
+        font-family: "Times New Roman", Times, serif;
+
+        @include respond(mobile-screen) {
+          width: 95%;
+        }
+      }
+    }
+
+    &-status-message {
+      margin: 0;
+    }
+
+    &-button {
+      @include button;
+      background-color: $col-accent-4;
+      border: 0;
+      border-radius: 5px;
+      padding: 0px 20px;
+      box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
+
+      &:hover {
+        background-color: $col-accent-2;
+      }
+    }
+  }
 }

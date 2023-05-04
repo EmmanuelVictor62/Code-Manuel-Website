@@ -58,7 +58,8 @@ const Contact = (props: ContactProps) => {
                 <i className={`${element.className}`}></i>
               </div>
               <div className="contact-sidebar__info">
-                {element.name}: <span>{element.content}</span>
+                {element.name}:{" "}
+                <a href={`${element.content}`}>{element.content}</a>
               </div>
             </div>
           );

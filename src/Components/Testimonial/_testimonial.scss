@@ -1,131 +1,144 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
-.testimonial{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    padding:4em 0em 6em 0em;
+.testimonial {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  padding: 4em 0em 6em 0em;
+  display: flex;
+  flex-direction: column;
 
-    &[data-toggle='true']{
-        background-color: $col-dark-global;
-        color: $col-white;
+  &[data-toggle="true"] {
+    background-color: $col-dark-global;
+    color: $col-white;
+  }
+
+  &__heading {
+    text-transform: capitalize;
+    margin-top: 0;
+
+    @include respond(mobile-screen) {
+      font-size: 29px;
+    }
+  }
+
+  &__subheading {
+    @include font-size(20px);
+    max-width: 80%;
+    margin: 0;
+    line-height: 1.8em;
+    text-align: justify;
+
+    &--container {
+      @include flex-justify;
+    }
+  }
+
+  &-card {
+    @include border-radius(8px);
+    box-sizing: border-box;
+    height: 460px;
+    width: 362px;
+    padding: 30px 20px 40px 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 12px 25px 0 rgba(0, 0, 0, 0.16);
+
+    &:hover {
+      box-shadow: 8px 12px 25px 0 rgba(0, 0, 0, 0.23);
     }
 
-    &__heading{
-        text-transform: capitalize;
-        margin-top: 0;
+    &-wrapper {
+      height: 480px;
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 5em;
+      column-gap: 15px;
+      align-self: center;
 
-        @include respond(mobile-screen){
-            font-size: 29px;
-        }
-    }
-
-    &__subheading{
-        @include font-size(20px);
-        max-width: 91%;
-        margin: 0;
-        line-height: 1.8em;
-
-        &--container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    &-card{
+      @include respond(mobile-screen) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2em;
         height: fit-content;
-        width: 350px;
-        background-color: white;
-        border-radius: 10px;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        box-shadow: 0 8px 30px rgb(0 0 0 / 25%);
-        cursor: pointer;
+      }
 
-        @include respond(mobile-screen){
-            width: 85%;
-        }
-
-        &:hover{
-            box-shadow: 0 8px 30px rgb(0 0 0 / 35%); 
-        }
-
-        &__wrapper{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            justify-items: center;
-            margin-top: 5em;
-
-            @include respond(mobile-screen){
-                grid-template-columns: repeat(1,1fr);
-                row-gap: 2em;
-            }
-
-            @include respond(tablet-screen){
-                grid-template-columns: repeat(1,1fr);
-                row-gap: 2em;
-            }
-        }
-
-        &__description{
-            font-size: 1.125rem;
-            font-weight: 400;
-            line-height: 1.7rem;
-            height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            // padding-top: 40px;
-
-            & i{
-                font-size: 200%;
-                float: left;
-                opacity: 1;
-                transform: rotate(10deg) translate(-10px, -40px);
-                color: #4D3FA3;
-                margin-left: -30px;
-                position: absolute;
-                top: 50px;
-                left:40px;
-            }
-
-            & p{
-                max-width: 80%;
-                text-align: left;
-                color: $col-dark;
-                margin: 0;
-                margin-top: 2.7em;
-                align-self: flex-start;
-            }
-        }
-
-        &__subheading{
-            background: linear-gradient(90deg, #2E3192 0%, #1BFFFF 100%);
-            height: 140px;
-            border-radius: 0px 0px 10px 10px;
-            position: relative;
-
-            & p{
-                @include font(22px,600);
-                margin-top: 90px;
-                color: white;
-            }
-        }
-
-        &__image{
-            height: 120px;
-            width: 120px;
-            border-radius: 50%;
-            border: 3.5px solid white;
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+      @include respond(tablet-screen) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2em;
+        height: fit-content;
+      }
     }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      //   padding-top: 20px;
+
+      & i {
+        font-size: 55px;
+        transform: rotate(10deg);
+        color: #ad2b96;
+      }
+    }
+
+    &-content {
+      @include font(18px, 300);
+      text-align: left;
+      line-height: 27px;
+      color: #4e4e4e;
+    }
+
+    &-footer {
+      @include flex;
+      width: 100%;
+      margin-top: auto;
+
+      & button {
+        @include flex-justify;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        @include border-radius(50%);
+        background-color: lightgray;
+        width: 42px;
+        height: 42px;
+
+        & a {
+          & img {
+            width: 42px;
+            height: 42px;
+            @include border-radius(50%);
+          }
+
+          & i {
+            font-size: 20px;
+          }
+        }
+      }
+
+      &-name {
+        margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        @include font(22px, 400);
+        color: $col-dark;
+
+        &-box {
+          border-left: 1px solid #797979;
+          margin-left: 10px;
+          padding-left: 5px;
+          text-align: left;
+        }
+
+        &-description {
+          margin: 0;
+          @include font(15px, 300);
+          color: #4e4e4e;
+        }
+      }
+    }
+  }
 }

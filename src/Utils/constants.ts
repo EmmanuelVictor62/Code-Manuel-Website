@@ -4,7 +4,8 @@ import Homedotly from "../Images/Homedotly.jpg";
 import CuratorVideo from "../Images/curator.jpg";
 import airbnbImg from "../Images/Airbnb.jpg";
 import portfolioImg from "../Images/portfolio.jpg";
-import JaneImg from "../Images/Jane.webp";
+import FrankImg from "../Images/Frank.png";
+import MayorImg from "../Images/Mayor.jpeg";
 
 export const Link = [
   {
@@ -221,26 +222,23 @@ export const flipBoxContent = [
 
 export const testimonialCardContent = [
   {
-    name: "Sussie Dumond",
-    content: `Lorem ipsum dolor sit amet consectetur elit. 
-        Ipsa voluptatum ipsum, laudantium minima aliquam porro?
-        Iste, Et, esta ah Lorem ipsum dolor sit amet consectetur elit. 
-        Ipsa`,
-    image: JaneImg,
+    name: "Adewole Mayowa",
+    image: MayorImg,
+    description: "CEO, CreativeMinds LLC",
+    githubLink: "https://github.com/mayordwells",
+    content: `Working with Emmanuel has been an absolute pleasure. His exceptional technical skills, coupled with his strong work ethic, make him a valuable asset to our team. His ability to learn quickly and adapt to new challenges is impressive. Emmanuel is a great addition to our team and I look forward to seeing him grow as a developer.`,
+  },
+  {
+    name: "Frank Uchenna",
+    image: FrankImg,
+    description: "Senior Frontend Developer",
+    githubLink: "https://github.com/codeOlam",
+    content: `As a Senior Frontend Developer, I've had the pleasure of working alongside Emmanuel. His technical skills and dedication to his work are impressive, and I have no doubt he would continue to grow and succeed in his career. I highly recommend him for any future projects.`,
   },
   {
     name: "Jane Cole",
-    content: `Lorem ipsum dolor sit amet consectetur elit. 
-        Ipsa voluptatum ipsum, laudantium minima aliquam porro?
-        Iste, Et, esta ah`,
-    image: JaneImg,
-  },
-  {
-    name: "Jane Cole",
-    content: `Lorem ipsum dolor sit amet consectetur elit. 
-        Ipsa voluptatum ipsum, laudantium minima aliquam porro?
-        Iste, Et, esta ah`,
-    image: JaneImg,
+    description: "Hired via Upwork",
+    content: `I can confidently say that Emmanuel is one of the best frontend developers I've ever worked with. His expertise, attention to detail, and commitment to delivering exceptional results truly sets him apart. It was a pleasure to work with him, and I would not hesitate to hire him again for future projects`,
   },
 ];
 
@@ -256,8 +254,13 @@ export const contactField = [
     content: "royalmanuel62@gmail.com",
   },
   {
-    name: "Website",
-    className: "fa-solid fa-phone",
-    content: "+2347049011040",
+    name: "Linkedin",
+    className: "fa-brands fa-linkedin",
+    content: "in/emmanuel-victor-0a7700240",
+  },
+  {
+    name: "Whatsapp",
+    className: "fa-brands fa-whatsapp",
+    content: "in/emmanuel-victor-0a7700240",
   },
 ];
