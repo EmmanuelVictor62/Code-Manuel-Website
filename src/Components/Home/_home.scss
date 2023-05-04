@@ -4,16 +4,29 @@
   &__container {
     @include flex-column;
     @include font-size(18px);
-    height: 92vh;
+    height: 92vh !important;
     width: 100%;
     justify-content: center;
+    text-align: center;
+    overflow: hidden !important;
+    backface-visibility: hidden;
+    position: relative;
+  }
+
+  &__background {
+    @include kenBurnsEffect;
+    animation: ken-burns 20s ease-in-out infinite;
+    height: 100%;
+    width: 100%;
     background: URL("../../Images/laptopanddesktop.webp") no-repeat center
       center fixed;
     @include background-cover;
     background-color: $col-dark-2;
-    text-align: center;
-    // @include kenBurnsEffect;
-    // animation: ken-burns 20s ease-in-out infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
 
     @include respond(mobile-screen) {
       background-position: center;
@@ -71,6 +84,7 @@
     margin-top: 0px;
     line-height: 30px;
     animation: fadeIn 2s ease 0s 1 normal forwards;
+    margin-bottom: 10px;
 
     @include respond(mobile-screen) {
       @include font-size(18px);

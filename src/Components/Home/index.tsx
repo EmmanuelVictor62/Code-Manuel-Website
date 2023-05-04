@@ -1,7 +1,6 @@
 import React from "react";
 import "./_home.scss";
 import { Typewriter } from "react-simple-typewriter";
-
 export interface HomeProps {
   toggle?: boolean;
 }
@@ -9,6 +8,8 @@ export interface HomeProps {
 const Home: React.FC<HomeProps> = ({ toggle }) => {
   return (
     <div className="home-page__container" id="home">
+      <div className="home-page__background"></div>
+
       <p className="home-page__heading">
         <span data-toggle={toggle}>
           <Typewriter
