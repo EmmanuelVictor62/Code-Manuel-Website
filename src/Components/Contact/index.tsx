@@ -67,8 +67,7 @@ const Contact: React.FC<ContactProps> = ({ toggle }) => {
                 <i className={`${element.className}`}></i>
               </div>
               <div className="contact-sidebar__info">
-                {element.name}:{" "}
-                <a href={`${element.content}`}>{element.content}</a>
+                {element.name}: <a>{element.content}</a>
               </div>
             </div>
           );
