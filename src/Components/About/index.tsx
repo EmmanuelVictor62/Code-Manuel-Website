@@ -1,3 +1,4 @@
+import React from "react";
 import "./_about.scss";
 import myImg from "../../Images/Royal-manuel (1).png";
 
@@ -12,6 +13,7 @@ const About: React.FC<AboutMeProps> = ({ toggle }) => {
       <div className="about__image-container">
         <img src={myImg} className="about__image" alt="" />
       </div>
+
       <div className="about__description-container">
         <p className="about__description-heading">A Bit About Me</p>
         <p className="about__description-content">

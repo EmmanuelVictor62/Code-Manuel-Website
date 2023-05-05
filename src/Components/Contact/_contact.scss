@@ -92,7 +92,7 @@
       }
 
       & a {
-        @include font(16px, 400);
+        @include font(17px, 400);
         color: white;
 
         @include respond(mobile-screen) {
