@@ -9,11 +9,14 @@
   align-items: center;
 
   &[data-toggle="true"] {
-    background-color: $col-dark-global;
+    background-color: $col-dark-global-2;
     color: $col-white;
 
     .testimonial-card {
-      background-color: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.8);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
 
       &-footer-name-description,
       &-content {

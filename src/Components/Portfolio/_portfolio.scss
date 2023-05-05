@@ -8,6 +8,11 @@
   padding: 3em 0em 4em 0em;
   color: white;
 
+  &[data-toggle="true"] {
+    background: $col-dark-global-3;
+    color: $col-white;
+  }
+
   &__heading {
     @include font-size(30px);
     text-transform: capitalize;

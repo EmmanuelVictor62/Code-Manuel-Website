@@ -2,9 +2,13 @@ import React from "react";
 import { flipBoxContent } from "../../Utils/constants";
 import "./_portfolio.scss";
 
-const Portfolio: React.FC = () => {
+export interface PortfolioProps {
+  toggle?: boolean;
+}
+
+const Portfolio: React.FC<PortfolioProps> = ({ toggle }) => {
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio" id="portfolio" data-toggle={toggle}>
       <h1 className="portfolio__heading">
         Let the Projects Speak for themselves
       </h1>

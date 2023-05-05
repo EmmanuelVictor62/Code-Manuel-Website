@@ -34,7 +34,7 @@ const App = () => {
       <About toggle={theme} />
       <Services toggle={theme} />
       <Skills toggle={theme} />
-      <Portfolio />
+      <Portfolio toggle={theme} />
       <Testimonial toggle={theme} />
       <Contact toggle={theme} />
     </div>

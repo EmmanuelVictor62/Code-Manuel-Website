@@ -8,7 +8,7 @@
   color: $col-white;
 
   &[data-toggle="true"] {
-    background-color: $col-dark-global;
+    background-color: $col-dark-global-3;
   }
 
   @include respond(mobile-screen) {
