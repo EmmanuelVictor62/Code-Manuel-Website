@@ -1,5 +1,6 @@
 import { testimonialCardContent } from "../../Utils/constants";
 import "./_testimonial.scss";
+import { Animate } from "../Animate";
 
 export interface TestimonialProps {
   toggle?: boolean;
@@ -8,15 +9,19 @@ export interface TestimonialProps {
 const Testimonial: React.FC<TestimonialProps> = ({ toggle }) => {
   return (
     <div className="testimonial" data-toggle={toggle}>
-      <h1 className="testimonial__heading">Bringing a personal touch</h1>
-      <div className="testimonial__subheading--container">
-        <p className="testimonial__subheading">
-          With a passion for frontend development, I continuously improve my
-          skills to take on new challenges. My dedication to open communication
-          and collaboration ensures client satisfaction, delivering projects
-          that exceed expectations. Hear what others have said.
-        </p>
-      </div>
+      <Animate.FadeIn>
+        <h1 className="testimonial__heading">Bringing a personal touch</h1>
+        <div className="testimonial__subheading--container">
+          <p className="testimonial__subheading">
+            With a passion for frontend development, I continuously improve my
+            skills to take on new challenges. My dedication to open
+            communication and collaboration ensures client satisfaction,
+            delivering projects that exceed expectations. Hear what others have
+            said.
+          </p>
+        </div>
+      </Animate.FadeIn>
+
       <div className="testimonial-card-wrapper">
         {testimonialCardContent.map((card, index) => {
           return (

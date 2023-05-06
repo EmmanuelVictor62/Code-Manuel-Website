@@ -1,5 +1,6 @@
 import React from "react";
 import { flipBoxContent } from "../../Utils/constants";
+import { Animate } from "../Animate";
 import "./_portfolio.scss";
 
 export interface PortfolioProps {

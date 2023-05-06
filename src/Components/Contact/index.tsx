@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { contactField } from "../../Utils/constants";
+import { Animate } from "../Animate";
 import "./_contact.scss";
 import emailjs from "emailjs-com";
 
@@ -73,70 +74,74 @@ const Contact: React.FC<ContactProps> = ({ toggle }) => {
           );
         })}
       </div>
-      <form className="contact__form-container" onSubmit={sendEmail}>
-        <h2>Get in touch</h2>
-        <div className="contact__form">
-          <div className="contact__form-name-container">
-            <input
-              type="text"
-              className="contact__form-input"
-              name="name"
-              id="name"
-              placeholder="Name"
-              onChange={(event) => setName(event.target.value)}
-              value={Name}
-              required
-            />
+      <Animate.SlideInLeft
+        styles={{ display: "flex", justifyContent: "center" }}
+      >
+        <form className="contact__form-container" onSubmit={sendEmail}>
+          <h2>Get in touch</h2>
+          <div className="contact__form">
+            <div className="contact__form-name-container">
+              <input
+                type="text"
+                className="contact__form-input"
+                name="name"
+                id="name"
+                placeholder="Name"
+                onChange={(event) => setName(event.target.value)}
+                value={Name}
+                required
+              />
 
-            <input
-              type="text"
-              className="contact__form-input "
-              name="user-email"
-              id="user-email"
-              placeholder="Email"
-              onChange={(event) => setEmail(event.target.value)}
-              value={Email}
-              required
-            />
-          </div>
-
-          <input
-            type="text"
-            className="contact__form-input contact__form-input--subject"
-            name="Subject"
-            id="Subject"
-            placeholder="Subject"
-            onChange={(event) => setSubject(event.target.value)}
-            value={Subject}
-          />
-
-          <textarea
-            className="contact__form-input contact__form-input--textarea"
-            name="Message"
-            id="Message"
-            placeholder="Message"
-            cols={30}
-            rows={7}
-            onChange={(event) => setMessage(event.target.value)}
-            value={Message}
-            required
-          />
-          {toggleAlert ? (
-            <div className="contact__form-alert">
-              <button onClick={handleAlertToggle}>
-                <i className=" fa-solid fa-xmark"></i>
-              </button>
-              <p className="contact__form-alert-message" data-type={type}>
-                {statusMessage}
-              </p>
+              <input
+                type="text"
+                className="contact__form-input "
+                name="user-email"
+                id="user-email"
+                placeholder="Email"
+                onChange={(event) => setEmail(event.target.value)}
+                value={Email}
+                required
+              />
             </div>
-          ) : null}
 
-          <button type="submit" value="send" className="contact__form-button">
-            Send Message
-          </button>
-        </div>
-      </form>
+            <input
+              type="text"
+              className="contact__form-input contact__form-input--subject"
+              name="Subject"
+              id="Subject"
+              placeholder="Subject"
+              onChange={(event) => setSubject(event.target.value)}
+              value={Subject}
+            />
+
+            <textarea
+              className="contact__form-input contact__form-input--textarea"
+              name="Message"
+              id="Message"
+              placeholder="Message"
+              cols={30}
+              rows={7}
+              onChange={(event) => setMessage(event.target.value)}
+              value={Message}
+              required
+            />
+            {toggleAlert ? (
+              <div className="contact__form-alert">
+                <button onClick={handleAlertToggle}>
+                  <i className=" fa-solid fa-xmark"></i>
+                </button>
+                <p className="contact__form-alert-message" data-type={type}>
+                  {statusMessage}
+                </p>
+              </div>
+            ) : null}
+
+            <button type="submit" value="send" className="contact__form-button">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </Animate.SlideInLeft>
     </div>
   );
 };

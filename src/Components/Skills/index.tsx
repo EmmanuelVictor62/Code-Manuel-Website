@@ -1,4 +1,5 @@
 import { skillsIcon } from "../../Utils/constants";
+import { Animate } from "../Animate";
 import Icons from "../Icons";
 
 import "./_skills.scss";

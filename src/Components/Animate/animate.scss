@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.animate {
+  &__slide-right {
+    @include slideInRightAnimation;
+    animation: slideInRight 2s ease 0s 1 normal forwards;
+  }
+
+  &__slide-left {
+    @include slideInLeftAnimation;
+    animation: slideInLeft 2s ease 0s 1 normal forwards;
+  }
+
+  &__scale-in {
+    @include scaleUpAnimation;
+    animation: scaleUp 2s ease 0s 1 normal forwards;
+  }
+
+  &__fade-in {
+    @include fadeInAnimation;
+    animation: fadeIn 1.5s ease 0s 1 normal forwards;
+  }
+
+  &__form {
+    @include slideInRightForm;
+    animation: slideRight 3.5s ease 0s 1 normal forwards;
+
+    @include respond(tablet-screen) {
+      @include slideInRightForm;
+      animation: slideRight 3.5s ease 0s 1 normal forwards;
+    }
+
+    @include respond(mobile-screen) {
+      @include slideInUpForm;
+      animation: slideUp 3s ease 0s 1 normal forwards;
+    }
+  }
+}

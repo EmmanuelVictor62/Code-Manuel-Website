@@ -38,9 +38,15 @@
     }
 
     @include respond(mobile-screen) {
-      width: 85%;
-      &:not(:last-child) {
-        margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &-box {
+      @include respond(mobile-screen) {
+        width: 85%;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
       }
     }
 

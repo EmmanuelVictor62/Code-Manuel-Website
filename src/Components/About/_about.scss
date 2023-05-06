@@ -2,10 +2,11 @@
 
 .about {
   height: fit-content;
-  display: flex;
+  padding: 4em 0em 7em 0em;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
   justify-content: space-around;
-  padding: 4em 0em 7em 0em;
 
   &[data-toggle="true"] {
     background: $col-dark-global-2;
@@ -13,6 +14,7 @@
   }
 
   @include respond(mobile-screen) {
+    display: flex;
     flex-direction: column;
     height: fit-content;
     justify-content: center;
@@ -21,8 +23,6 @@
 
   &__image {
     &-container {
-      @include slideInLeftAnimation;
-      animation: slideInLeft 5s ease 0s 1 normal forwards;
       background-color: lightgray;
       width: fit-content;
       border-radius: 50px;
@@ -43,8 +43,6 @@
       font-family: "Times New Roman", Times, serif;
       max-width: 750px;
       @include font(19px, 400);
-      @include slideInRightAnimation;
-      animation: slideInRight 4s ease 0s 1 normal forwards;
 
       @include respond(mobile-screen) {
         padding: 0px 15px;
