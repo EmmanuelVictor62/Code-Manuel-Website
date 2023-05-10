@@ -163,7 +163,7 @@ export const flipBoxContent = [
     description: `Experience a modern and interactive church website built on 
     WordPress, with a responsive design and easy-to-use interface.`,
     githubLink: "",
-    link: "https://dev-gods-will-pentecostal.pantheonsite.io/",
+    link: "https://63.33.100.45/",
     skills: ["HTML", "CSS", "Next.js", "Wordpress"],
   },
   {
