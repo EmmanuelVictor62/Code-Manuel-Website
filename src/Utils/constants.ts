@@ -201,12 +201,12 @@ export const flipBoxContent = [
   {
     img: airbnbImg,
     heading: "Airbnb Clone Website",
-    description: `Developed a responsive Airbnb clone with React and CSS, 
+    description: `Developed a responsive Airbnb clone with AngularJs and SCSS, 
     featuring custom design elements and user-friendly functionality. 
     Optimized interface for seamless user experience.`,
-    githubLink: "https://github.com/EmmanuelVictor62/Airbnb-Clone",
-    link: "https://airbnb-clone-ashen-two.vercel.app/",
-    skills: ["React", "CSS"],
+    githubLink: "https://github.com/EmmanuelVictor62/Angular-App",
+    link: "https://airbnb-angularjs-clone.netlify.app/",
+    skills: ["AngularJs", "HTML", "CSS"],
   },
   {
     img: portfolioImg,
